@@ -1,0 +1,28 @@
+#Import Python Libraries
+import numpy as np
+import scipy as sp
+import pandas as pd
+df = pd.read_csv("http://rcs.bu.edu/examples/python/data_analysis/Salaries.csv")
+df.head() #Display first 5 Records
+df.head(10) #10Records
+df.dtypes #shows the datatype of table header
+df.shape #Records of dataframe 
+df.columns
+list(df)
+len(df) #columns count
+df.describe()
+df.std() #standard Deviation
+df.head(50).mean()
+df.phd #column data
+df['salary'].describe
+df['salary'].count()
+df['salary'].mean()
+df_rank=df.groupby(['rank'])
+df_rank.mean()
+df.groupby('rank', sort=False)[['salary']].mean()
+df_rank=df.groupby(['rank'])
+df_rank.mean()
+df.groupby('rank', sort=False)[['salary']].mean()
+df[10:20] 
+df.loc[10:20,['rank','sex','salary']] #if we need to select a range of rows, using their labels we can use methods loc
+df.iloc[10:20,[0,3,4,5]] #(select rows by their labels)
