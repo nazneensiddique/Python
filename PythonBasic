@@ -34,3 +34,13 @@ df_sorted.head(10)
 flights = pd.read_csv("http://rcs.bu.edu/examples/python/data_analysis/flights.csv")
 flights[flights.isnull().any(axis=1)].head()
 flights[['dep_delay','arr_delay']].agg(['min','mean','max']) #aggregation
+
+
+import matplotlib.pyplot as plt
+%matplotlib inline
+y=[3,10,7,5,3,4.5,6,8.1]
+N=len(y)
+x=range(N)
+width=1/1.5
+
+plt.bar(x,y,width,color="blue")
