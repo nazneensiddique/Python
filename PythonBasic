@@ -26,3 +26,11 @@ df.groupby('rank', sort=False)[['salary']].mean()
 df[10:20] 
 df.loc[10:20,['rank','sex','salary']] #if we need to select a range of rows, using their labels we can use methods loc
 df.iloc[10:20,[0,3,4,5]] #(select rows by their labels)
+df_sorted=df.sort_values(by=['service','salary'],ascending=[True,False])
+df_sorted.head(10)
+
+
+
+flights = pd.read_csv("http://rcs.bu.edu/examples/python/data_analysis/flights.csv")
+flights[flights.isnull().any(axis=1)].head()
+flights[['dep_delay','arr_delay']].agg(['min','mean','max']) #aggregation
